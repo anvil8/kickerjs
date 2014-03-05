@@ -1,0 +1,43 @@
+<div class="row-fluid">
+  <div class="panel panel-default">
+      <div class="panel-body">
+        <br/>
+        <b><h1>ADD DATA FROM ADMIN PANEL TO SEE RESULT</h1></b>
+        <br/>
+      </div>
+    </div>
+  </div>
+    
+
+
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <span class="label label-primary">Model1</span>
+        {{ model1.status }}
+        <br/>
+        <br/>
+      </div>
+    </div>
+    <div ng-repeat="item in model1.collection" class="panel panel-default">
+      <div class="panel-body">
+        {{ item.name }}
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <span class="label label-info">Model2</span>
+       {{ model2.status }}        <br/>
+        <br/>
+      </div>
+    </div>
+    <div ng-repeat="item in model2.collection" class="panel panel-default">
+      <div class="panel-body">
+        {{ item.name }}
+      </div>
+    </div>
+  </div>
+
+</div>

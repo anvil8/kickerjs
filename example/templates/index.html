@@ -1,0 +1,30 @@
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  </head>
+  <body ng-app="example">
+    <div class="container" ng-view=""></div>
+    <script src="http://cdn.sockjs.org/sockjs-0.3.min.js"> </script>
+    <script src="http://cdn.sockjs.org/websocket-multiplex-0.1.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/q.js/0.9.2/q.min.js"> </script>
+    <script type="text/javascript" src="https://rawgithub.com/marcuswestin/store.js/master/store.min.js"></script>
+    <script type="text/javascript" src="{{STATIC_URL}}kicker.js"></script>
+    <script type="text/javascript" src="{{STATIC_URL}}angular.min.js"></script>
+    <script type="text/javascript" src="{{STATIC_URL}}angular-route.min.js"></script>
+    <script>
+        var sockjs = new SockJS('http://127.0.0.1:8013/multiplexer');
+        var multiplexer = new WebSocketMultiplex(sockjs);
+    </script>
+  <script type="text/javascript" src="{{STATIC_URL}}controllers.js"></script>
+
+
+</body>
+</html>
